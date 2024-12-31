@@ -1,0 +1,49 @@
+.temp-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+}
+
+.temp-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 20px 0px 20px;
+    height: 130px;
+}
+
+.high-low-container {
+    display: flex;
+    align-items: center;
+
+    .max {
+        font-size: 18px;
+        padding: 5px 10px 0px 10px;
+        margin: 0;
+    }
+}
+
+#current-temp {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.temperature {
+    font-family: 'Poppins', sans-serif; 
+    color: #323547;
+    font-size: 70px;
+    padding-top: 8px;
+    margin: 0;
+}
+
+.temp-svg {
+    fill: #323547;
+    width: 150px;
+    height: 130px;
+}
+

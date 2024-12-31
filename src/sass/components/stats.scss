@@ -1,0 +1,76 @@
+.stats-container {
+    width: 420px;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+.stat-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.stats-text {
+    padding: 0px 0px 0px 16px;
+    margin: 0px 0px 0px 0px;
+}
+
+.stat-right-side {
+        display: flex;
+        align-items: center;
+}
+
+.stat-number {
+    margin: 0px 0px 0px 0px;
+}
+
+.stats-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0px 20px 0px 0px;
+    padding-left: 10px;
+}
+
+#humidity-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    padding-left: 16px;
+}
+
+#visibility-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    padding-left: 16px;
+}
+
+#feels-like-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    padding-left: 14px;
+}
+
+#uv-index-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 23px;
+    padding-left: 12px;
+}
+
+#moon-phase-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 27px;
+    padding-left: 16px;
+}
+
+.stats-line {
+    height: 1px;
+    width: 400px;
+    background-color: gray;
+    overflow: hidden;
+    margin: 0;
+}

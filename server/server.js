@@ -31,7 +31,7 @@ app.get('/weather', async (req, res) => {
         const data = await response.json();
         console.log('Weather API response: ', data);
 
-        const todayISO = new Date().toISOString().split('T')[0];
+        const todayISO = new Date().toLocaleDateString('en-CA');
         const todaysData = data.days.find(day => day.datetime === todayISO);
 
         if (!todaysData) {

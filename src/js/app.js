@@ -15,4 +15,4 @@ const temperatureElement = document.querySelector('.temperature');
 
 const data = await getWeather();
 
-temperatureElement.textContent = `${data.temp}`
+temperatureElement.textContent = `${data.temp}°`;

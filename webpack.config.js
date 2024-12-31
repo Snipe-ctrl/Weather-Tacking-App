@@ -1,5 +1,6 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -51,5 +52,10 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(__dirname, 'src/index.html'),
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+              { from: path.resolve(__dirname, 'src/public/weather-icons'), to: 'weather-icons' },
+            ],
+          }),
     ],
 }
