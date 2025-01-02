@@ -8,8 +8,8 @@
 <body>
     <div class="zip-date-container">
         <div class="zip-container">
-            <input type="text" class="zip-input" name="zip-input" placeholder="Zip">
-            <button type="button" class="enter-button">Enter</button>
+            <input type="text" class="zip-input" name="zip-input" id="zip-input" placeholder="Zip">
+            <button type="button" class="enter-button" id="enter-button">Enter</button>
         </div>
     </div>
     <div class="main-card-container">
@@ -23,7 +23,7 @@
                         <p id="low" class="max">L:1°</p>
                     </div>
                 </div>
-            <svg version="1.1" class="temp-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" class="temp-svg" id="main-temp-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                 <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                     c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -54,7 +54,7 @@
             <div id="precipitation" class="stat-div">
                 <p id="precipitation-text" class="stats-text">Precipitation</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">0.1</p>
+                    <p id="precip-stat" class="stat-number">0.1</p>
                     <svg version="1.1" class="stats-icon" id="precip-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                     <path d="M9.81,15.25c0,0.92,0.23,1.78,0.7,2.57s1.1,1.43,1.9,1.9c0.8,0.47,1.66,0.71,2.59,0.71c0.93,0,1.8-0.24,2.61-0.71
@@ -68,7 +68,7 @@
             <div id="humidity" class="stat-div">
                 <p id="humidity-text" class="stats-text">Humidity</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">93</p>
+                    <p id="humidity-stat" class="stat-number">93</p>
                     <svg version="1.1" class="stats-icon" id="humidity-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                     <path d="M7.56,17.19c0-0.88,0.24-1.89,0.72-3.03s1.1-2.25,1.86-3.31c1.56-2.06,2.92-3.62,4.06-4.67l0.75-0.72
@@ -96,7 +96,7 @@
             <div id="visibility" class="stat-div">
                 <p id="visibiity-text" class="stats-text">Visibility</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">6.9</p>
+                    <p id="visibility-stat" class="stat-number">6.9</p>
                     <svg version="1.1" class="stats-icon" id="visibility-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                     <path d="M2.62,21.05c0-0.24,0.08-0.45,0.25-0.61c0.17-0.16,0.38-0.24,0.63-0.24h18.67c0.25,0,0.45,0.08,0.61,0.24
@@ -119,7 +119,7 @@
             <div id="feels-like" class="stat-div">
                 <p id="feels-like-text" class="stats-text">Feels-like</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">45°</p>
+                    <p id="feels-like-stat" class="stat-number">45°</p>
                     <svg version="1.1" class="stats-icon" id="feels-like-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                     <path d="M9.91,19.56c0-0.85,0.2-1.64,0.59-2.38s0.94-1.35,1.65-1.84V5.42c0-0.8,0.27-1.48,0.82-2.03S14.2,2.55,15,2.55
@@ -136,7 +136,7 @@
             <div id="uv-index" class="stat-div">
                 <p id="uv-idex-text" class="stats-text">UV Index</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">0 of 11</p>
+                    <p id="uv-stat" class="stat-number">0 of 11</p>
                     <svg version="1.1" class="stats-icon" id="uv-index-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                         <path d="M4.37,14.62c0-0.24,0.08-0.45,0.25-0.62c0.17-0.16,0.38-0.24,0.6-0.24h2.04c0.23,0,0.42,0.08,0.58,0.25
@@ -168,7 +168,7 @@
             <div id="moon-phase" class="stat-div">
                 <p id="moon-phase-text" class="stats-text">Moon Phase</p>
                 <div class="stat-right-side">
-                    <p class="stat-number">New Moon</p>
+                    <p id="moon-phase-stat" class="stat-number">New Moon</p>
                 <svg version="1.1" class="stats-icon" id="moon-phase-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                     <path d="M3.74,14.44c0,2.04,0.5,3.93,1.51,5.65s2.37,3.1,4.1,4.1s3.61,1.51,5.65,1.51s3.92-0.5,5.65-1.51s3.09-2.37,4.09-4.1
@@ -182,8 +182,8 @@
         </div>
         <div class="hours-container">
             <div class="hour-container-1">
-                <p class="hour">1:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-1" class="hour">1:00 AM</p>
+                <svg version="1.1" id="hour-1-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -209,12 +209,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-1-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">2:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-2" class="hour">2:00 AM</p>
+                <svg version="1.1" id="hour-2-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -240,12 +240,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-2-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">3:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-3" class="hour">3:00 AM</p>
+                <svg version="1.1" id="hour-3-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -271,12 +271,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-3-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">4:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-4" class="hour">4:00 AM</p>
+                <svg version="1.1"id="hour-4-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -302,12 +302,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-4-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">5:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-5" class="hour">5:00 AM</p>
+                <svg version="1.1" id="hour-5-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -333,12 +333,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-5-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">6:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-6" class="hour">6:00 AM</p>
+                <svg version="1.1" id="hour-6-icon"class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -364,12 +364,12 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-6-temp" class="temp">55°</p>
             </div>
             <div class="line"></div>
             <div class="hour-container-1">
-                <p class="hour">7:00 AM</p>
-                <svg version="1.1" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <p id="hour-7" class="hour">7:00 AM</p>
+                <svg version="1.1" id="hour-7-icon" class="hour-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve" height="50px" width="50px">
                     <path d="M3.09,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27s0.29-0.4,0.29-0.66
                         c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28H4.09c-0.29,0-0.53,0.09-0.72,0.28C3.18,12.89,3.09,13.13,3.09,13.43z M4.86,19.61
@@ -395,7 +395,7 @@
                         C20.76,6.58,20.67,6.81,20.67,7.09z M23.25,13.43c0,0.27,0.09,0.49,0.28,0.67s0.43,0.26,0.72,0.26h1.69c0.27,0,0.5-0.09,0.69-0.27
                         s0.29-0.4,0.29-0.66c0-0.29-0.09-0.53-0.28-0.71s-0.42-0.28-0.69-0.28h-1.69c-0.29,0-0.53,0.09-0.72,0.28
                         C23.35,12.89,23.25,13.13,23.25,13.43z"/></svg>
-                <p class="temp">55°</p>
+                <p id="hour-7-temp" class="temp">55°</p>
             </div>
         </div>
         </div>

@@ -10,7 +10,6 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 const API_KEY = process.env.WEATHER_API_KEY;
-const API_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/97338/?key=${API_KEY}`;
 
 app.use(cors({
     origin: '*',
@@ -19,9 +18,13 @@ app.use(cors({
 }));
 
 app.get('/weather', async (req, res) => {
-    
+    const zipCode = req.query.zip;
+    console.log(`Recieved zip: ${zipCode}`)
+    const API_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${zipCode}/?key=${API_KEY}`;
+
     try {
         const response = await fetch(API_URL);
+        console.log(`API response status: ${response.status}`);
 
         if (!response.ok) {
             console.error(`Failed to catch weather data: ${response.statusText}`);
@@ -29,7 +32,6 @@ app.get('/weather', async (req, res) => {
         }
 
         const data = await response.json();
-        console.log('Weather API response: ', data);
 
         const todayISO = new Date().toLocaleDateString('en-CA');
         const todaysData = data.days.find(day => day.datetime === todayISO);
