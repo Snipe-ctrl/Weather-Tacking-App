@@ -1,5 +1,11 @@
+@use '../abstracts' as *;
+
 body {
     background-color: #323547;
     font-family: 'Poppins', sans-serif;
+
+    @include breakpoint-down('small') {
+        background-color: white;
+    }
 }
 

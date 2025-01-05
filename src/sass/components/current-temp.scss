@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .temp-container {
     display: flex;
     justify-content: start;
@@ -5,6 +7,10 @@
     flex-direction: column;
     width: 300px;
     height: 500px;
+
+    @include breakpoint-down('small') {
+        height: 300px;
+    }
 }
 
 .temp-text-container {
@@ -45,5 +51,10 @@
     fill: #323547;
     width: 150px;
     height: 130px;
+
+    @include breakpoint-down('small') {
+        width: 300px;
+        height: 300px;
+    }
 }
 

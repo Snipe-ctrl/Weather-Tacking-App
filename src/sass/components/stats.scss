@@ -1,7 +1,15 @@
+@use '../abstracts' as *;
+
 .stats-container {
     width: 420px;
     overflow: hidden;
     margin-left: auto;
+
+    @include breakpoint-down('small') {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px 0px;
+    }
 }
 
 .stat-div {
@@ -14,6 +22,10 @@
 .stats-text {
     padding: 0px 0px 0px 16px;
     margin: 0px 0px 0px 0px;
+
+    @include breakpoint-down('small') {
+        font-size: 15px;
+    }
 }
 
 .stat-right-side {
@@ -23,6 +35,10 @@
 
 .stat-number {
     margin: 0px 0px 0px 0px;
+
+    @include breakpoint-down('small') {
+        font-size: 15px;
+    }
 }
 
 .stats-icon {
