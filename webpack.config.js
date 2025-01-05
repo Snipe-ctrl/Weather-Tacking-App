@@ -1,6 +1,7 @@
-const path = require('path')
+const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // Import the plugin
 
 module.exports = {
     mode: 'development',
@@ -16,7 +17,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist')
+            directory: path.resolve(__dirname, 'dist'),
         },
         port: 3000,
         open: true,
@@ -28,7 +29,11 @@ module.exports = {
         rules: [
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader',]
+                use: [
+                    MiniCssExtractPlugin.loader, // Use the plugin loader
+                    'css-loader',
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.js$/,
@@ -42,9 +47,9 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource'
-            }
-        ]
+                type: 'asset/resource',
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -54,8 +59,11 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-              { from: path.resolve(__dirname, 'src/public/weather-icons'), to: 'weather-icons' },
+                { from: path.resolve(__dirname, 'src/public/weather-icons'), to: 'weather-icons' },
             ],
-          }),
+        }),
+        new MiniCssExtractPlugin({ // Add the plugin
+            filename: '[name][contenthash].css',
+        }),
     ],
-}
+};

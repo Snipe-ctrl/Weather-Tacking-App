@@ -1,0 +1,241 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
+  \**************************************************************************************************************/
+.zip-date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.zip-input {
+  cursor: text;
+  border-radius: 5px;
+  border: 1.5px solid rgb(65, 57, 57);
+  height: 30px;
+  width: 220px;
+  font-size: 14px;
+  box-shadow: rgba(119, 122, 175, 0.3) 0px 1px 4px 0px inset;
+  color: rgb(35, 38, 59);
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding-left: 10px;
+  margin-right: 15px;
+  transition: 100ms ease-in-out;
+}
+.zip-input:hover {
+  box-shadow: 0 1px 0 0 rgba(29, 31, 45, 0.05);
+  outline: none;
+  border: 1.5px solid #959595;
+}
+.zip-input:focus {
+  border: 1.5px solid #3792d8;
+  outline: none;
+}
+.zip-input::placeholder {
+  padding-left: 20px;
+}
+
+.enter-button {
+  cursor: pointer;
+  background-color: #0A66C2;
+  color: white;
+  border: 0;
+  border-radius: 100px;
+  height: 25px;
+  width: 70px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.enter-button:hover {
+  background-color: #2480dd;
+}
+
+body {
+  background-color: #323547;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-card-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  overflow: hidden;
+}
+.main-card-container .main-card {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-radius: 20px;
+  width: 50%;
+  height: 400px;
+  justify-content: space-between;
+}
+
+.hours-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hour-container-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+  width: 70px;
+}
+
+.hour {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 14px;
+}
+
+.hour-svg {
+  padding: 7px 0px 7px 0px;
+}
+
+.temp {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.line {
+  width: 1px;
+  height: 120px;
+  background-color: gray;
+}
+
+.temp-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+}
+
+.temp-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 20px 0px 20px;
+  height: 130px;
+}
+
+.high-low-container {
+  display: flex;
+  align-items: center;
+}
+.high-low-container .max {
+  font-size: 18px;
+  padding: 5px 10px 0px 10px;
+  margin: 0;
+}
+
+#current-temp {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.temperature {
+  font-family: "Poppins", sans-serif;
+  color: #323547;
+  font-size: 70px;
+  padding-top: 8px;
+  margin: 0;
+}
+
+.temp-svg {
+  fill: #323547;
+  width: 150px;
+  height: 130px;
+}
+
+.stats-container {
+  width: 420px;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.stat-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.stats-text {
+  padding: 0px 0px 0px 16px;
+  margin: 0px 0px 0px 0px;
+}
+
+.stat-right-side {
+  display: flex;
+  align-items: center;
+}
+
+.stat-number {
+  margin: 0px 0px 0px 0px;
+}
+
+.stats-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0px 20px 0px 0px;
+  padding-left: 10px;
+}
+
+#humidity-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+  padding-left: 16px;
+}
+
+#visibility-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+  padding-left: 16px;
+}
+
+#feels-like-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 25px;
+  padding-left: 14px;
+}
+
+#uv-index-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 23px;
+  padding-left: 12px;
+}
+
+#moon-phase-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 27px;
+  padding-left: 16px;
+}
+
+.stats-line {
+  height: 1px;
+  width: 400px;
+  background-color: gray;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*# sourceMappingURL=bundle96883218326909b5f731.css.map*/

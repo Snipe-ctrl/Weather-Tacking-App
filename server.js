@@ -17,8 +17,12 @@ app.use(cors({
     allowedHeaders: ['Content-Type'],
 }));
 
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist/index.html'));
+});
+
 app.get('/weather', async (req, res) => {
-    const zipCode = req.query.zip;
+    const zipCode = req.query.zip || '97338';
     console.log(`Recieved zip: ${zipCode}`)
     const API_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${zipCode}/?key=${API_KEY}`;
 
@@ -48,7 +52,7 @@ app.get('/weather', async (req, res) => {
     }
 })
 
-app.use(express.static(path.resolve(__dirname, '../dist')));
+app.use(express.static(path.resolve(__dirname, 'dist')));
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
