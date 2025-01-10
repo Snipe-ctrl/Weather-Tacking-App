@@ -46,6 +46,7 @@ app.get('/weather', async (req, res) => {
         }
 
         res.json(todaysData);
+        console.log(todaysData)
     } catch (error) {
         console.error('Error in /weather endpoint: ', error.message);
         res.status(500).json({ error: 'Internal server error' });
